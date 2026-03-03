@@ -69,7 +69,7 @@ public class P{number}_{ProblemName} {
 
 | Category       | Solved |
 |----------------|--------|
-| Arrays         | 1      |
+| Arrays         | 2      |
 | Strings        | 0      |
 | Linked List    | 0      |
 | Trees          | 0      |
