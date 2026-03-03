@@ -5,9 +5,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * #1 - Two Sum
+ * #271 - Contains_Duplicate
  * Difficulty: Easy
- * Link: https://leetcode.com/problems/contains-duplicate/description/
+ * Link: https://leetcode.com/problems/contains-duplicate
  *
  * Given an integer array nums, return true if any value appears at least twice in the array,
  * and return false if every element is distinct.
@@ -61,35 +61,33 @@ public class P217_Contains_Duplicate {
 //        }
 //    }
 
-//    public boolean containsDuplicate(int[] nums) {
-//
-//        long totalCount = nums.length;
-//
-//        long totalDistinctCount = Arrays.stream(nums).distinct().count();
-//
-//        if(totalCount > totalDistinctCount) {
-//            return true;
-//        }
-//        else {
-//            return false;
-//        }
-//    }
-
-    // newSet.add(num) return false when there is a value in set
     public boolean containsDuplicate(int[] nums) {
 
-        Set<Integer> newSet = new HashSet<>();
+        long totalCount = nums.length;
 
-//        for (int i = 0; i < nums.length; i++) {
-//            if(newSet.add(nums[i]) == false) {
+        long totalDistinctCount = Arrays.stream(nums).distinct().count();
+
+        return totalDistinctCount < totalCount;
+    }
+
+    //TODO newSet.add(num) return false when there is a value in set
+//    public boolean containsDuplicate(int[] nums) {
+//
+//        Set<Integer> newSet = new HashSet<>();
+//
+////        for (int i = 0; i < nums.length; i++) {
+////            if(newSet.add(nums[i]) == false) {
+////                return true;
+////            }
+////        }
+//        for (int num : nums) {
+//            if(!newSet.add(num)) {
 //                return true;
 //            }
 //        }
-        for (int num : nums) {
-            if(newSet.add(num) == false) {
-                return true;
-            }
-        }
-        return false;
+//        return false;
+//    }
+    public static void main(String[] args) {
+        new P217_Contains_Duplicate().containsDuplicate(new int[]{1,2,3,1});
     }
 }
