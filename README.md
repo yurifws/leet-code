@@ -69,7 +69,7 @@ public class P{number}_{ProblemName} {
 
 | Category       | Solved |
 |----------------|--------|
-| Arrays         | 5      |
+| Arrays         | 3      |
 | Strings        | 0      |
 | Linked List    | 0      |
 | Trees          | 0      |
@@ -77,9 +77,9 @@ public class P{number}_{ProblemName} {
 | Dynamic Prog.  | 0      |
 | Math           | 0      |
 | Backtracking   | 0      |
-| Two Pointers   | 0      |
+| Two Pointers   | 1      |
 | Sliding Window | 0      |
 | Binary Search  | 0      |
-| Stack          | 0      |
+| Stack          | 1      |
 | Heap           | 0      |
-| **Total**      | **1**  |
+| **Total**      | **5**  |
