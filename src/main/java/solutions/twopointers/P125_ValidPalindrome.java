@@ -37,13 +37,25 @@ package solutions.twopointers;
  *
  */
 public class P125_ValidPalindrome {
+//    public boolean isPalindrome(String s) {
+//        s = s.toLowerCase().replaceAll("[^a-z0-9]", "").trim();
+//
+//        StringBuilder stringBuilder = new StringBuilder(s);
+//        String reverseS = stringBuilder.reverse().toString();
+//
+//        return s.equals(reverseS);
+//    }
+
     public boolean isPalindrome(String s) {
         s = s.toLowerCase().replaceAll("[^a-z0-9]", "").trim();
 
-        StringBuilder stringBuilder = new StringBuilder(s);
-        String reverseS = stringBuilder.reverse().toString();
-
-        return s.equals(reverseS);
+        char[] charArray = s.toCharArray();
+        for (int i = 0; i < charArray.length/2; i++) {
+            if(charArray[i] != charArray[charArray.length - i - 1]){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
