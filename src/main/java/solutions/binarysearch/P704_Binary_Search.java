@@ -80,7 +80,7 @@ public class P704_Binary_Search {
 //    }
     //TODO WITH RECURSION
     public int search(int[] nums, int target) {
-        return helper(nums, target, 0, nums.length);
+        return helper(nums, target, 0, nums.length - 1);
     }
 
     private int helper(int[] nums, int target, int left, int right) {
