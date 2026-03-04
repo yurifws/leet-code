@@ -9,17 +9,17 @@ class P1_TwoSumTest {
     private final P1_TwoSum solution = new P1_TwoSum();
 
     @Test
-    void testBasicCase() {
+    void case1() {
         assertArrayEquals(new int[]{0, 1}, solution.twoSum(new int[]{2, 7, 11, 15}, 9));
     }
 
     @Test
-    void testDuplicates() {
+    void case2() {
         assertArrayEquals(new int[]{1, 2}, solution.twoSum(new int[]{3, 2, 4}, 6));
     }
 
     @Test
-    void testSameElement() {
+    void case3() {
         assertArrayEquals(new int[]{0, 1}, solution.twoSum(new int[]{3, 3}, 6));
     }
 }
