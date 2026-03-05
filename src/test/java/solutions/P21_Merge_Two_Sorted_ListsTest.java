@@ -15,21 +15,29 @@ class P21_Merge_Two_Sorted_ListsTest {
  //* Output: [1,1,2,3,4,4]
     @Test
     void case1() {
-        assertEquals(new ListNode(1,new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4)))))),
-                solution.mergeTwoLists(
-                        new ListNode(1, new ListNode(2, new ListNode(4))),
-                        new ListNode(1, new ListNode(3, new ListNode(4)))));
+        ListNode expected = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4))))));
+        ListNode actual = solution.mergeTwoLists(
+                new ListNode(1, new ListNode(2, new ListNode(4))),
+                new ListNode(1, new ListNode(3, new ListNode(4))));
+        assertEquals(1, actual.val);
+        assertEquals(1, actual.next.val);
+        assertEquals(2, actual.next.next.val);
+        assertEquals(3, actual.next.next.next.val);
+        assertEquals(4, actual.next.next.next.next.val);
+        assertEquals(4, actual.next.next.next.next.next.val);
     }
 
     @Test
     void case2() {
-        assertEquals(new ListNode(),
-                solution.mergeTwoLists(new ListNode(),new ListNode()));
+        ListNode expected = new ListNode();
+        ListNode actual = solution.mergeTwoLists(new ListNode(), new ListNode());
+        assertEquals(expected.val, actual.val);
     }
 
     @Test
     void case3() {
-        assertEquals(new ListNode(0),
-                solution.mergeTwoLists( new ListNode(), new ListNode(0)));
+        ListNode expected = new ListNode(0);
+        ListNode actual = solution.mergeTwoLists(new ListNode(), new ListNode(0));
+        assertEquals(expected.val, actual.val);
     }
 }

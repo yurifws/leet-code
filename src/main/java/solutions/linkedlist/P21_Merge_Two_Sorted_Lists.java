@@ -59,14 +59,6 @@ step 6: list2 still has 4 → attach remainder → result: 1->1->2->3->4->4
         ListNode dummy = new ListNode();
         ListNode curr = dummy;
 
-        boolean l1Empty = (list1 == null || list1.isEmpty);
-        boolean l2Empty = (list2 == null || list2.isEmpty);
-
-        if (l1Empty && l2Empty) return new ListNode(); // case2: [] + [] = []
-        if (l1Empty) return list2;                     // case3: [] + [0] = [0]
-        if (l2Empty) return list1;
-
-
         while (list1 != null && list2 != null) {
             if(list1.val < list2.val){
                 curr.next = list1;
