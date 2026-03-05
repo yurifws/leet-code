@@ -15,7 +15,6 @@ class P21_Merge_Two_Sorted_ListsTest {
  //* Output: [1,1,2,3,4,4]
     @Test
     void case1() {
-        ListNode expected = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4))))));
         ListNode actual = solution.mergeTwoLists(
                 new ListNode(1, new ListNode(2, new ListNode(4))),
                 new ListNode(1, new ListNode(3, new ListNode(4))));
