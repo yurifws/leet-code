@@ -1,7 +1,6 @@
 package solutions.linkedlist;
 
-import java.util.LinkedList;
-import java.util.Objects;
+import solutions.utils.ListNode;
 
 /**
  * #206 - Reverse Linked List
@@ -38,24 +37,6 @@ import java.util.Objects;
  *
  */
 public class P206_Reverse_Linked_List {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        public ListNode() {}
-        public ListNode(int val) { this.val = val; }
-        public ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof ListNode)) return false;
-            ListNode that = (ListNode) o;
-            return this.val == that.val && Objects.equals(this.next, that.next);
-        }
-    }
-
 
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
@@ -107,14 +88,6 @@ public class P206_Reverse_Linked_List {
 
     public static void main(String[] args) {
         new P206_Reverse_Linked_List().reverseList(
-                new ListNode(1,
-                        new ListNode(2,
-                                new ListNode(3,
-                                        new ListNode(4,
-                                                new ListNode(5))
-                                )
-                        )
-                )
-        );
+                new ListNode(1,new ListNode(2,new ListNode(3,new ListNode(4,new ListNode(5))))));
     }
 }
