@@ -55,33 +55,68 @@ step 5: equal  → pick list1(4)  → result: 1->1->2->3->4
 step 6: list2 still has 4 → attach remainder → result: 1->1->2->3->4->4
 
      */
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode dummy = new ListNode();
-        ListNode curr = dummy;
+//    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+//        ListNode dummy = new ListNode();
+//        ListNode curr = dummy;
+//
+//        while (list1 != null && list2 != null) {
+//            if(list1.val < list2.val){
+//                curr.next = list1;
+//                list1 = list1.next;
+//                curr = curr.next;
+//            }else if(list1.val > list2.val){
+//                curr.next = list2;
+//                list2 = list2.next;
+//                curr = curr.next;
+//            } else {
+//                curr.next = list1;
+//                list1 = list1.next;
+//                curr = curr.next;
+//            }
+//        }
+//
+//        if (list1 != null){
+//            curr.next = list1;
+//        }else {
+//            curr.next = list2;
+//        }
+//
+//        return dummy.next;
+//    }
 
-        while (list1 != null && list2 != null) {
+    /**
+     * ### Visual Example
+     * ```
+     * list1: 1 -> 2 -> 4
+     * list2: 1 -> 3 -> 4
+     *
+     * call(1->2->4, 1->3->4)  equal    → pick list1(1), call(2->4, 1->3->4)
+     *   call(2->4, 1->3->4)   2>1      → pick list2(1), call(2->4, 3->4)
+     *     call(2->4, 3->4)    2<3      → pick list1(2), call(4, 3->4)
+     *       call(4, 3->4)     4>3      → pick list2(3), call(4, 4)
+     *         call(4, 4)      equal    → pick list1(4), call(null, 4)
+     *           call(null, 4) basecase → return list2(4)
+     */
+    //TODO RECURSION SOLUTION
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if(list1 != null && list2 != null){
             if(list1.val < list2.val){
-                curr.next = list1;
-                list1 = list1.next;
-                curr = curr.next;
-            }else if(list1.val > list2.val){
-                curr.next = list2;
-                list2 = list2.next;
-                curr = curr.next;
+                list1.next = mergeTwoLists(list1.next, list2);
+                return list1;
+            }
+            if(list1.val > list2.val){
+                list2.next = mergeTwoLists(list1, list2.next);
+                return list2;
             } else {
-                curr.next = list1;
-                list1 = list1.next;
-                curr = curr.next;
+                list1.next = mergeTwoLists(list1.next, list2);
+                return list1;
             }
         }
-
-        if (list1 != null){
-            curr.next = list1;
+        if (list1 == null){
+            return list2;
         }else {
-            curr.next = list2;
+            return list1;
         }
-
-        return dummy.next;
     }
 
     public static void main(String[] args) {
