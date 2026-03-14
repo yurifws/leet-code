@@ -69,17 +69,17 @@ public class P{number}_{ProblemName} {
 
 | Category       | Solved |
 |----------------|--------|
-| Arrays         | 3      |
+| Arrays         | 4      |
 | Strings        | 0      |
-| Linked List    | 2      |
-| Trees          | 0      |
+| Linked List    | 3      |
+| Trees          | 6      |
 | Graphs         | 0      |
 | Dynamic Prog.  | 0      |
 | Math           | 0      |
 | Backtracking   | 0      |
 | Two Pointers   | 1      |
 | Sliding Window | 1      |
-| Binary Search  | 0      |
+| Binary Search  | 1      |
 | Stack          | 1      |
-| Heap           | 0      |
-| **Total**      | **8**  |
+| Heap           | 2      |
+| **Total**      | **19** |
