@@ -77,9 +77,9 @@ public class P{number}_{ProblemName} {
 | Dynamic Prog.  | 0      |
 | Math           | 0      |
 | Backtracking   | 0      |
-| Two Pointers   | 2      |
+| Two Pointers   | 3      |
 | Sliding Window | 1      |
 | Binary Search  | 1      |
 | Stack          | 1      |
 | Heap           | 2      |
-| **Total**      | **21** |
+| **Total**      | **22** |
