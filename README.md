@@ -80,6 +80,6 @@ public class P{number}_{ProblemName} {
 | Two Pointers   | 3      |
 | Sliding Window | 1      |
 | Binary Search  | 1      |
-| Stack          | 1      |
+| Stack          | 2      |
 | Heap           | 2      |
-| **Total**      | **22** |
+| **Total**      | **23** |
