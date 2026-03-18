@@ -78,8 +78,8 @@ public class P{number}_{ProblemName} {
 | Math           | 0      |
 | Backtracking   | 0      |
 | Two Pointers   | 3      |
-| Sliding Window | 1      |
+| Sliding Window | 2      |
 | Binary Search  | 1      |
 | Stack          | 3      |
 | Heap           | 2      |
-| **Total**      | **24** |
+| **Total**      | **25** |
