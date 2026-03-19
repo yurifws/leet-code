@@ -62,6 +62,31 @@ public class P875_Koko_Eating_Bananas {
         return left;
     }
 
+    public int minEatingSpeedRecursive(int[] piles, int h) {
+        int right = 0;
+        for (int pile: piles){
+            right = Math.max(right, pile);
+        }
+
+        return binarySearch(piles, h, 1, right);
+    }
+
+    int binarySearch(int[] piles, int h, int left, int right) {
+        if (left >= right) return left;
+
+        int mid = left + (right - left) / 2;
+        int totalHours = 0;
+        for (int pile: piles){
+            totalHours += (pile + mid - 1) / mid;
+        }
+
+        if (totalHours > h) {
+            return binarySearch(piles, h, mid + 1, right);  // go faster
+        } else {
+            return binarySearch(piles, h, left, mid);   // try slower
+        }
+    }
+
     public static void main(String[] args) {
         new P875_Koko_Eating_Bananas().minEatingSpeed(new int[]{3,6,7,11}, 8);
     }
