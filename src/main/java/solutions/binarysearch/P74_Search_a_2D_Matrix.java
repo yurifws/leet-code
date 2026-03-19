@@ -3,7 +3,7 @@ package solutions.binarysearch;
 /**
  * #74 - Search a 2D Matrix
  * Difficulty: Medium
- * Link: {link}
+ * Link: https://leetcode.com/problems/search-a-2d-matrix/
  *
  * You are given an m x n integer matrix matrix with the following two properties:
  *
