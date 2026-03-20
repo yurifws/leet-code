@@ -71,7 +71,7 @@ public class P{number}_{ProblemName} {
 |----------------|--------|
 | Arrays         | 5      |
 | Strings        | 0      |
-| Linked List    | 4      |
+| Linked List    | 5      |
 | Trees          | 6      |
 | Graphs         | 0      |
 | Dynamic Prog.  | 0      |
@@ -82,4 +82,4 @@ public class P{number}_{ProblemName} {
 | Binary Search  | 3      |
 | Stack          | 3      |
 | Heap           | 2      |
-| **Total**      | **29** |
+| **Total**      | **30** |
