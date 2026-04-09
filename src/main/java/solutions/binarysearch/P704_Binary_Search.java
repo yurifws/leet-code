@@ -66,7 +66,9 @@ public class P704_Binary_Search {
         int right = nums.length - 1;
 
         while (left <= right){
-            int mid = (left + right) / 2;
+            //int mid = (left + right) / 2; // it could overlow the interget
+            int mid = left + (right - left) / 2; // better practice
+
             if(nums[mid] > target){
                 right = mid - 1 ;
             }else if(nums[mid] < target){
